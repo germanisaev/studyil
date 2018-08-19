@@ -3,12 +3,14 @@ import { TranslateService } from '../../translate';
 
 import { LanguagesService } from '../../translate/language.service';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable, Subject } from 'rxjs/Rx';
+import { Observable, Subject } from 'rxjs';
 import 'rxjs/Rx'; //get everything from Rx    
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 declare var $: any;
+
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-pageloaded',
@@ -17,7 +19,8 @@ declare var $: any;
 })
 export class PageloadedComponent implements OnInit {
 
-  imgUrl = "http://localhost:4200/assets/images/";
+  //imgUrl = "http://localhost:4200/assets/images/";
+  imgUrl = environment.imgUrl;
 
   introCarousel: string[];
   languages: string[];
@@ -25,9 +28,9 @@ export class PageloadedComponent implements OnInit {
   objJSON: string[];
   defaultLang: string;
 
-  urlJSON: string = './assets/langEN.json';
+  urlJSON = './assets/data.json';
   titleIntro: any;
-  languageId: string = '0';
+  languageId = '0';
 
   constructor(private http: Http,
               private _translate: TranslateService,
@@ -52,7 +55,6 @@ export class PageloadedComponent implements OnInit {
     this.languageService.languageChange(lang);
     this.languageId = lang;
     //this.getLanguage();
-
   }
 
   ngOnInit() {
@@ -89,9 +91,7 @@ export class PageloadedComponent implements OnInit {
     script.defer = true;
     body.appendChild(script);
   }
-
 }
-
 
 function scrollOffsetTop(reportId) {
   $('html, body').animate({ scrollTop: $(reportId).offset().top + 100 }, 'slow');
