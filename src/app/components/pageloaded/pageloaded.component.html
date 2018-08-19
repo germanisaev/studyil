@@ -1,0 +1,421 @@
+<!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i>
+        <a href="mailto:contact@gov.il">contact@gov.il</a>
+        <i class="fa fa-phone"></i> +972 5589 55488 55
+      </div>
+      <div class="social-links float-right" *ngFor="let obj of objJSON.topbar.social">
+        <a href="{{obj.link}}" class="{{obj.icon}}">
+          <i class="fa fa-{{obj.icon}}"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!--==========================
+        Header
+      ============================-->
+  
+  <header id="header">
+    <div class="container">
+  
+      <div id="logo" class="pull-left">
+        <h1>
+          <a href="#topbar" class="scrollto">{{objJSON.header.titleLogo}}
+            <span>{{objJSON.header.suffix}}</span>
+          </a>
+        </h1>
+        <!--
+        <a href="#body"><img src="{{imgUrl}}logo.png" alt="" title="" /></a>
+        -->
+      </div>
+  
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          
+          <li class="{{obj.class}}" *ngFor="let obj of objJSON.header.menu">
+            <a href="{{obj.link}}">{{obj.title | translate}}</a>
+            <ul *ngIf="obj.productsMenu != null">
+              <li *ngFor="let prod of obj.productsMenu">
+                <a href="{{prod.link}}">{{prod.title | translate}}</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="globe menu-has-children">
+            <a href="javascript:void(0)">{{currentLanguage}}&nbsp;
+              <i class="fa fa-globe" aria-hidden="true"></i>
+            </a>
+            <ul class="languages">
+              <li *ngFor="let lng of languages; let i=index">
+                <a href="#intro" (click)="chooseLanguage(i)" [ngClass]="{'selectedLang':languages[i]==currentLanguage}">{{lng}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!--#nav-menu-container -->
+    </div>
+  </header>
+  
+  <!-- #header -->
+  
+  <!--==========================
+        Intro Section
+      ============================-->
+  
+  <section id="intro">
+  
+    <div class="intro-content">
+  
+      <h2>{{objJSON.intro.title1}}
+        <span>{{objJSON.intro.title2}}</span>
+        <br>{{objJSON.intro.title3}}</h2>
+  
+      <div>
+        <a href="#about" class="btn-get-started scrollto">{{objJSON.intro.started}}</a>
+        <a href="#portfolio" class="btn-projects scrollto">{{objJSON.intro.projects}}</a>
+      </div>
+    </div>
+  
+    <div id="intro-carousel" class="owl-carousel">
+      <!--
+      <div class="item" *ngFor="let intro of introCarousel" style="background-image: url('{{intro}}');"></div>
+      -->
+      <div class="item" style="background-image: url('{{imgUrl}}intro-carousel/1.jpg');"></div>
+      <!--
+        <div class="item" [ngStyle]="objJSON.intro.style"></div>
+        <img [src]="imageUrl | default:'<default-image-url>'"/>
+  
+      <div class="item" style="background-image: url('{{imgUrl}}intro-carousel/1.jpg');"></div>
+      <div class="item" style="background-image: url('{{imgUrl}}intro-carousel/2.jpg');"></div>
+      <div class="item" style="background-image: url('{{imgUrl}}intro-carousel/3.jpg');"></div>
+      <div class="item" style="background-image: url('{{imgUrl}}intro-carousel/4.jpg');"></div>
+      <div class="item" style="background-image: url('{{imgUrl}}intro-carousel/5.jpg');"></div>
+      -->
+  
+    </div>
+  
+  </section>
+  
+  <!-- #intro -->
+  
+  <main id="main">
+  
+    <!--==========================
+          About Section
+        ============================-->
+  
+    <section id="about" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="{{imgUrl}}about-img.jpg" alt="">
+          </div>
+  
+          <div class="col-lg-6 content">
+            <h2>{{objJSON.about.title}}</h2>
+            <h3>{{objJSON.about.description}}</h3>
+  
+            <ul>
+              <li *ngFor="let checkmark of objJSON.about.checkmarks">
+                <i class="ion-android-checkmark-circle"></i>
+                {{checkmark.title}}
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- #about -->
+  
+    <!--==========================
+          Services Section
+        ============================-->
+  
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>{{objJSON.services.title}}</h2>
+          <p>{{objJSON.services.description}}</p>
+        </div>
+  
+        <div class="row">
+  
+          <div class="col-lg-6" *ngFor="let box of objJSON.services.boxes; let i=index">
+            <div class="box wow {{box.class}}" data-wow-delay="0.2s">
+              <div class="icon">
+                <i class="fa fa-{{box.icon}}"></i>
+              </div>
+              <h4 class="title">
+                <a href="">{{box.link}}</a>
+              </h4>
+              <p class="description">{{box.description}}</p>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- #services -->
+  
+    <!--==========================
+          Clients Section
+        ============================-->
+  
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>{{objJSON.clients.title}}</h2>
+          <p>{{objJSON.clients.description}}</p>
+        </div>
+  
+        <div class="owl-carousel clients-carousel">
+  
+          <img src="{{imgUrl}}clients/client-1.jpg" alt="">
+          <img src="{{imgUrl}}clients/client-2.jpg" alt="">
+          <img src="{{imgUrl}}clients/client-3.jpg" alt="">
+          <img src="{{imgUrl}}clients/client-4.jpg" alt="">
+          <img src="{{imgUrl}}clients/client-5.jpg" alt="">
+          <img src="{{imgUrl}}clients/client-6.jpg" alt="">
+          <img src="{{imgUrl}}clients/client-7.jpg" alt="">
+          <img src="{{imgUrl}}clients/client-8.jpg" alt="">
+  
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- #clients -->
+  
+    <!--==========================
+          Our Portfolio Section
+        ============================-->
+  
+    <section id="portfolio" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>{{objJSON.portfolio.title}}</h2>
+          <p>{{objJSON.portfolio.description}}</p>
+        </div>
+      </div>
+  
+      <div class="container-fluid">
+        <div class="row no-gutters">
+  
+          <div class="col-lg-3 col-md-4" *ngFor="let item of objJSON.portfolio.items">
+            <div class="portfolio-item wow fadeInUp">
+              <a href="{{imgUrl}}{{item.img}}" class="portfolio-popup">
+                <img src="{{imgUrl}}{{item.img}}" alt="">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h2 class="wow fadeInUp">{{item.title}}</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- #portfolio -->
+  
+    <!--==========================
+          Testimonials Section
+        ============================-->
+  
+    <section id="testimonials" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>{{objJSON.testimonials.title}}</h2>
+          <p>{{objJSON.testimonials.description}}</p>
+        </div>
+        <div class="owl-carousel testimonials-carousel">
+  
+          <div class="testimonial-item" *ngFor="let item of objJSON.testimonials.items">
+            <p>
+              <img src="{{imgUrl}}quote-sign-left.png" class="quote-sign-left" alt=""> {{item.titleImg}}
+              <img src="{{imgUrl}}quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+            <img src="{{imgUrl}}{{item.img}}" class="testimonial-img" alt="">
+            <h3>{{item.name}}</h3>
+            <h4>{{item.role}}</h4>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- #testimonials -->
+  
+    <!--==========================
+          Call To Action Section
+        ============================-->
+  
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">{{objJSON.callToAction.title}}</h3>
+            <p class="cta-text">{{objJSON.callToAction.description}}</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">{{objJSON.callToAction.button}}</a>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- #call-to-action -->
+  
+    <!--==========================
+          Our Team Section
+        ============================-->
+  
+    <section id="team" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>{{objJSON.team.title}}</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6" *ngFor="let item of objJSON.team.items">
+            <div class="member">
+              <div class="pic">
+                <img src="{{imgUrl}}{{item.img}}" alt="">
+              </div>
+              <div class="details">
+                <h4>{{item.name}}</h4>
+                <span>{{item.role}}</span>
+                <div class="social">
+                  <a href="{{social.link}}" *ngFor="let social of item.socials">
+                    <i class="fa fa-{{social.icon}}"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+  
+    <!-- #team -->
+  
+    <!--==========================
+          Contact Section
+        ============================-->
+  
+    <section id="contact" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>{{objJSON.contact.title}}</h2>
+          <p>{{objJSON.contact.description}}</p>
+        </div>
+  
+        <div class="row contact-info">
+  
+          <div class="col-md-4" *ngFor="let item of objJSON.contact.items">
+            <div class="{{item.contactClass}}">
+              <i class="{{item.outlineClass}}"></i>
+              <h3>{{item.title}}</h3>
+              <p>
+                <a href="{{item.link}}{{item.linkTitle}}">{{item.linkTitle}}</a>
+              </p>
+              <!--
+              <address>2 Kaplan Street, Jerusalem 535022, Israel</address>
+              -->
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+  
+      <div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>
+      <!--
+      <div class="container">
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+                />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"
+                />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"
+              />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      -->
+    </section>
+  
+    <!-- #contact -->
+  
+  </main>
+  
+  <!--==========================
+        Footer
+      ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright
+        <strong>StudyIL</strong>. All Rights Reserved
+      </div>
+      <!--
+      <div class="credits">
+        
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Studyus
+            
+        Designed by
+        <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+      -->
+      <div class="credits">
+        <a href="https://gov.il/">Site Israel Country</a>
+      </div>
+  
+    </div>
+  </footer>
+  <!-- #footer -->
+  
+  <a href="#" class="back-to-top">
+    <i class="fa fa-chevron-up"></i>
+  </a>

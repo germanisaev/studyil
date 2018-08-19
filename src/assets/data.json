@@ -1,0 +1,307 @@
+{
+    "topbar": {
+        "email": "contact@gov.il",
+        "phone": "+972 5589 55488 55",
+        "social": [
+            {
+                "icon": "linkedin",
+                "link": "#"
+            },
+            {
+                "icon": "google-plus",
+                "link": "#"
+            },
+            {
+                "icon": "instagram",
+                "link": "#"
+            },
+            {
+                "icon": "facebook",
+                "link": "#"
+            },
+            {
+                "icon": "twitter",
+                "link": "#"
+            }
+        ]
+    },
+    "header": {
+        "titleLogo": "Study",
+        "suffix": "IL",
+        "menu": [
+            {
+                "title": "menuHome",
+                "link": "#topbar",
+                "class": "menu-active"
+            },
+            {
+                "title": "menuAboutUs",
+                "link": "#about",
+                "class": ""
+            },
+            {
+                "title": "menuServices",
+                "link": "#services",
+                "class": ""
+            },
+            {
+                "title": "menuPortfolio",
+                "link": "#portfolio",
+                "class": ""
+            },
+            {
+                "title": "menuTeam",
+                "link": "#team",
+                "class": ""
+            },
+            {
+                "title": "menuProducts",
+                "link": "javascript:void(0)",
+                "class": "menu-has-children",
+                "productsMenu": [
+                    {
+                        "title": "menuProduct1",
+                        "link": "#product1",
+                        "class": ""
+                    },
+                    {
+                        "title": "menuProduct2",
+                        "link": "#product2",
+                        "class": ""
+                    },
+                    {
+                        "title": "menuProduct3",
+                        "link": "#product3",
+                        "class": ""
+                    },
+                    {
+                        "title": "menuProduct4",
+                        "link": "#product4",
+                        "class": ""
+                    }
+                ]
+            },
+            {
+                "title": "menuContact",
+                "link": "#contact",
+                "class": ""
+            }
+        ]
+    },
+    "intro": {
+        "title1": "Come",
+        "title2": "studying",
+        "title3": "in Israel!",
+        "started": "Get Started",
+        "projects": "Our Projects",
+        "style": "background-image: url('http://localhost:4200/assets/images/intro-carousel/1.jpg');"
+    },
+    "about": {
+        "title": "Study in Israel",
+        "description": "Technion International offers BSc Engineering programs taught in English for students around the world.",
+        "checkmarks": [
+            { "title": "Your passport valid for at least two years." },
+            { "title": "A letter of your acceptance to your seminary or yeshiva addressed to the Consulate of Israel." },
+            { "title": "The visa application form in duplicate. Forms can be obtained from the Israeli Consulate." },
+            { "title": "2 passport sized photos." },
+            { "title": "Proof of sufficient funds to cover tuition and living expenses." }
+        ]
+    },
+    "services": {
+        "title": "Services",
+        "description": "The College of Law and Business invites you to enroll to our first of its kind bilingual LL.B. degree. This unique opportunity combines the best of all worlds: Live in Israel, Study in its center, Speak Hebrew, Graduate with the ability to practice law in both languages and qualify to take the NYS bar exam.",
+        "boxes": [
+            { 
+                "link": "Business management",
+                "icon": "bar-chart",
+                "class": "fadeInLeft",
+                "delay": "false",
+                "description": "Business Administration Studies include classes in economy, math and accounting." 
+            },
+            { 
+                "link": "Jurisprudence",
+                "icon": "briefcase",
+                "class": "fadeInRight",
+                "delay": "false",
+                "description": "The College of Law and Business practices an interdisciplinary educational approach." 
+            },
+            { 
+                "link": "Computer disciplines",
+                "icon": "laptop",
+                "class": "fadeInLeft",
+                "delay": "true",
+                "description": "Computer sciences and IT degrees focus on developing the theoretical foundation for information and computer systems as well as the application of those foundations." 
+            },
+            { 
+                "link": "Journalism",
+                "icon": "newspaper-o",
+                "class": "fadeInRight",
+                "delay": "true",
+                "description": "Journalism refers to writing about current events for broadcast news on radio or television, or printed articles for newspapers and other publications." 
+            }
+        ]
+    },
+    "clients": {
+        "title": "Clients",
+        "description": "Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minimillum fore"
+    },
+    "portfolio": {
+        "title": "Our Portfolio",
+        "description": "The rates vary from place to place, and banks charge a commission",
+        "items": [
+            { 
+                "img": "portfolio/1.jpg",
+                "title": "Portfolio Item 1"
+            },
+            { 
+                "img": "portfolio/2.jpg",
+                "title": "Portfolio Item 2"
+            },
+            { 
+                "img": "portfolio/3.jpg",
+                "title": "Portfolio Item 3"
+            },
+            { 
+                "img": "portfolio/4.jpg",
+                "title": "Portfolio Item 4"
+            },
+            { 
+                "img": "portfolio/5.jpg",
+                "title": "Portfolio Item 5"
+            },
+            { 
+                "img": "portfolio/6.jpg",
+                "title": "Portfolio Item 6"
+            },
+            { 
+                "img": "portfolio/7.jpg",
+                "title": "Portfolio Item 7"
+            },
+            { 
+                "img": "portfolio/8.jpg",
+                "title": "Portfolio Item 8"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "description": "Holders of international credit cards can withdraw local or foreign currency at banks, which accept their credit cards.",
+        "items": [
+            {
+                "titleImg": "There are ATMs outside most banks.",
+                "img": "testimonial-1.jpg",
+                "name": "Saul Goodman",
+                "role": "Ceo &amp; Founder"
+            },
+            {
+                "titleImg": "To open a bank account as a foreign resident, you must bring your passport showing your Israeli visa.",
+                "img": "testimonial-2.jpg",
+                "name": "Sara Wilsson",
+                "role": "Designer"
+            },
+            {
+                "titleImg": "Banks require a small fee to open the account and an initial deposit (100 shekels is enough).",
+                "img": "testimonial-3.jpg",
+                "name": "Jena Karlis",
+                "role": "Store Owner"
+            },
+            {
+                "titleImg": "It is recommended to open a current accounts (called over v’shav in Hebrew) which can be used for paying bills, money transfers and everyday transactions.",
+                "img": "testimonial-4.jpg",
+                "name": "Matt Brandon",
+                "role": "Freelancer"
+            },
+            {
+                "titleImg": "Foreign currency of all kinds may be exchanged at the airport, banks, post offices or licensed exchange agencies in most cities.",
+                "img": "testimonial-5.jpg",
+                "name": "John Larson",
+                "role": "Entrepreneur"
+            }
+        ]
+    },
+    "callToAction": {
+        "title": "Call To Action",
+        "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteursint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "button": "Call To Action"
+    },
+    "team": {
+        "title": "Our Team",
+        "items": [
+            {
+                "img": "team-1.jpg",
+                "name": "Walter White",
+                "role": "Chief Executive Officer",
+                "socials": [
+                    { "icon": "twitter", "link": "#" },
+                    { "icon": "facebook", "link": "#" },
+                    { "icon": "google-plus", "link": "#" },
+                    { "icon": "linkedin", "link": "#" }
+                ]
+            },
+            {
+                "img": "team-2.jpg",
+                "name": "Sarah Jhinson",
+                "role": "Product Manager",
+                "socials": [
+                    { "icon": "twitter", "link": "#" },
+                    { "icon": "facebook", "link": "#" },
+                    { "icon": "google-plus", "link": "#" },
+                    { "icon": "linkedin", "link": "#" }
+                ]
+            },
+            {
+                "img": "team-3.jpg",
+                "name": "William Anderson",
+                "role": "CTO",
+                "socials": [
+                    { "icon": "twitter", "link": "#" },
+                    { "icon": "facebook", "link": "#" },
+                    { "icon": "google-plus", "link": "#" },
+                    { "icon": "linkedin", "link": "#" }
+                ]
+            },
+            {
+                "img": "team-4.jpg",
+                "name": "Amanda Jepson",
+                "role": "Accountant",
+                "socials": [
+                    { "icon": "twitter", "link": "#" },
+                    { "icon": "facebook", "link": "#" },
+                    { "icon": "google-plus", "link": "#" },
+                    { "icon": "linkedin", "link": "#" }
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact Us",
+        "description": "The State of Israel’s currency is the New Israel Shekel (NIS) or shekel for short (pluralized as shkalim in Hebrew or shekels in English). There are 100 Agorot (agora in singular) in each shekel.",
+        "items": [
+            {
+                "contactClass": "contact-address",
+                "outlineClass": "ion-ios-location-outline",
+                "title": "Address",
+                "link": "https://waze.com/ul?q=",
+                "linkTitle": "2 Kaplan Street, Jerusalem 535022, Israel"
+            },
+            {
+                "contactClass": "contact-phone",
+                "outlineClass": "ion-ios-telephone-outline",
+                "title": "Phone Number",
+                "link": "tel:",
+                "linkTitle": "+972505548855"
+            },
+            {
+                "contactClass": "contact-email",
+                "outlineClass": "ion-ios-email-outline",
+                "title": "Email",
+                "link": "mailto:",
+                "linkTitle": "info@gov.il"
+            }
+        ]
+    },
+    "footer": {
+        "email": "contact@gov.il",
+        "phone": "+972 5589 55488 55"
+    }
+}
